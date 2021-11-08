@@ -4,19 +4,38 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
   <title>Webchat Project</title>
 </head>
 <body>
   <header style="text-align: center;">
     <h1>Welcome to your favorite Webchat!</h1>
   </header>
-  <ul id="chat"></ul>
-  <form id="form" action="">
-    <input
-      id="messageInput"
-      autocomplete="off"
-      placeholder="Send a message"/><button>Send</button>
-  </form>
+  <div class="user">
+    <form>
+      <input
+        id="nickname-box"
+        class="nickname"
+        autocomplete="off"
+        data-testid="nickname-box"
+        placeholder="Nickname"/>
+      <button id="nicknameButton" data-testid="nickname-button">Save</button>
+  <p data-testid="online-user" id="userNickname"></p>    </form>
+  
+  </div>
+  <div class="message-box">
+    <ul id="chat">Live Chat:</ul>
+    <form id="form" action="">
+      <div>
+        <input
+          id="messageInput"
+          autocomplete="off"
+          placeholder="Send a message"
+          data-testid="message-box"/>
+        <button data-testid="send-button">Send</button>
+      </div>
+    </form>
+  </div>
   <script src="/socket.io/socket.io.js"></script>
   <script src="/socket.js"></script>
 </body>

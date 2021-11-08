@@ -25,10 +25,11 @@ app.get('/', (req, res) => {
 io.on('connection', (socket) => {
   console.log('logged in user', socket.id);
   socket.on('message', ({ chatMessage, nickname }) => {
+    console.log('Your nickname:', nickname);
     const time = new Date().toLocaleString().replace(/\//g, '-');
-    console.log('message', chatMessage, time);
     io.emit('message', `${time} - ${nickname}: ${chatMessage}`);
   });
+  socket.emit('online', socket.id.slice(0, 16));
   socket.on('disconnect', () => {
     console.log('disconnected user', socket.id);
   });
