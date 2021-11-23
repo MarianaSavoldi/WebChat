@@ -29,11 +29,19 @@ const createMessage = (message) => {
   chatUl.appendChild(chatLi);
 };
 
-// const onlineUser = (user) => {
-//   const userUl = document.getElementById('userNickname');
-//   const userLi = document.createElement('li');
-// };
+const msgHistory = (history) => {
+  console.log('history', history);
+  history.forEach(({ time, nickname, chatMessage }) => {
+    const message = document.getElementById('chat');
+    console.log('messages', message);
+    const li = document.createElement('li');
+    li.innerText = `${time} - ${nickname} : ${chatMessage}`;
+    li.setAttribute('data-testid', 'message');
+    message.appendChild(li);
+  });
+};
 
+socket.on('history', (history) => msgHistory(history));
 socket.on('message', (message) => createMessage(message));
 socket.on('online', (user) => {
   const pUser = document.getElementById('userNickname');
