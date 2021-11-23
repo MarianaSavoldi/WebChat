@@ -18,7 +18,6 @@ const io = require('socket.io')(http, {
 });
 
 const msgModel = require('./models/msgHistory');
-// const msgController = require('./controllers/msgHistController');
 
 app.set('view engine', 'ejs');
 app.set('views', './views');
@@ -37,7 +36,6 @@ io.on('connection', async (socket) => {
     const time = new Date().toLocaleString().replace(/\//g, '-');
     await msgModel.create({ time, nickname, chatMessage });
     io.emit('message', `${time} - ${nickname}: ${chatMessage}`);
-    // await msgController.getAll();
   });
 
   socket.on('disconnect', () => {
