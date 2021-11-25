@@ -1,0 +1,73 @@
+body {
+  background-color: rgb(175, 212, 192);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background-color: rgb(50, 150, 95);
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  font-weight: 900;
+  margin-right: 35px;
+  padding: 10px;
+}
+
+h2 {
+  margin: 0;
+  margin-top: 10px;
+}
+
+input {
+  border-radius: 10px;
+  font-size: 16px;
+  padding: 10px;
+}
+
+p {
+  display: flex;
+  margin: 0;
+  margin-left: 20px;
+  max-width: fit-content;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  width: 20%;
+}
+
+.message-box {
+  align-content: space-around;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+}
+
+.message-box div input {
+  border-radius: 10px;
+  margin-left: 35%;
+  margin-right: 0;
+  padding: 10px;
+  width: 50%;
+}
+
+.message-box ul {
+  background-color: rgb(225, 255, 245);
+  border: 2px solid black;
+  border-radius: 10px;
+  height: 23em;
+  list-style-type: none;
+  margin-left: 30%;
+  margin-right: 0;
+  padding: 10px 20px;
+  width: 60%;
+}
+
+.nickname {
+  margin: 0;
+  margin-left: 20px;
+  width: 17%;
+}
