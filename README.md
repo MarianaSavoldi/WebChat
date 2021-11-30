@@ -1,6 +1,6 @@
 # Boas vindas ao WebChat!
 
-<img align="center" alt="Mari-WebChat" src="http://cdn.onlinewebfonts.com/svg/img_518618.png" height="300" width="350"/>
+<img align="center" alt="Mari-WebChat" src="http://cdn.onlinewebfonts.com/svg/img_518618.png" height="200" width="250"/>
 
 # Sumário
 
